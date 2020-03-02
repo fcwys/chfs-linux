@@ -8,8 +8,8 @@ User=root
 Restart=on-failure
 RestartSec=5s
 ExecStart=/opt/chfs/chfs --file=/opt/chfs/config.ini
-ExecReload=ps -A | grep "chfs" | awk '{print $1}' | xargs kill -9 && /opt/chfs/chfs --file=/opt/chfs/config.ini
-ExecStop=ps -A | grep "chfs" | awk '{print $1}' | xargs kill -9
+ExecReload=
+ExecStop=
 
 [Install]
 WantedBy=multi-user.target
